@@ -1,7 +1,7 @@
-Alavetelitheme
+bilmehakki-theme
 ==============
 
-This is a "hello world" type theme package for Alaveteli.
+This is a theme for the Turkish Alaveteli install
 
 The intention is to support simple overlaying of templates and
 resources without the need to touch the core Alaveteli software.
