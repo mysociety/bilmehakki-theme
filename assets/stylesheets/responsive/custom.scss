@@ -1,24 +1,25 @@
 $color_sand: #f3f1eb;
-$color_black: #333333;
-$color_orange: #f4a140;
+$color_black: #030303;
+$color_orange: #D05E30;
 $color_blue: #4faded;
 $color_green: #62b356;
-$color_yellow: #ffd836;
-$color_red: #e04b4b;
+$color_yellow: #EDE813;
+$color_red: #C8372F;
 $color_violet: #a94ca6;
 $color_purple: #5c377f;
-$color_white: #ffffff;
+$color_white: #fdfdfd;
 
-$color_neutral_light: $color_sand;
+$color_neutral_light: $color_white;
 $color_neutral_dark: $color_black;
-$color_primary: $color_violet;
-$color_secondary: $color_orange;
+$color_primary: $color_yellow;
+$color_secondary: $color_black;
 
-$body-bg: $color_neutral_light;
+$body-bg: $color_sand;
 
 $body-font-color: $color_neutral_dark;
-$link-color: darken($color_blue, 20%);
-$action-color: $color_green;
+$link-color: $color_orange;
+
+$action-color: $color_red;
 $font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $form_input-bg: $color_white;
 
@@ -61,9 +62,9 @@ $action-color: $color_orange;
 %selected-menu-item {
   font-weight: bold;
   color: $color_primary;
-  background-color: $color_neutral_light;
+  background-color: $color_sand;
   &:hover{
-      background-color: $color_neutral_light;
+      background-color: $color_primary;
   }
 }
 
@@ -222,7 +223,7 @@ a.link_button_green_large {
 }
 
 #topnav {
-  background-color: darken($color_primary, 10%);
+  background-color: darken($color_black, 10%);
 }
 
 .site-title__logo {
@@ -240,17 +241,21 @@ a.link_button_green_large {
 
 #navigation{
   border-bottom: none;
+  font-weight: bold;
   a {
+    color: $color_white;
     @extend %menu-item;
   }
   /* Show which section is currently selected */
   li.selected a{
+    color: $color_black;
     @extend %selected-menu-item;
   }
 
   /* Vertically align the search box */
   #navigation_search{
     input{
+      color: $color_black;
       margin-top:0.313em;
       margin-bottom:0.313em;
       height: 1.875em;
@@ -324,18 +329,19 @@ a.link_button_green_large {
   a {
     @extend %menu-item;
     background-color: transparent;
-    font-weight: normal;
-    color: $color_white;
+    font-weight: bold;
+    color: $color_black;
     &:hover,
     &:active,
     &:focus {
+      color: $color_orange;
       background-color: transparent;
     }
   }
   #logged_in_links {
     top: 2em;
     a {
-      font-weight: normal;
+      font-weight: bold;
     }
   }
 }
@@ -359,11 +365,11 @@ a.link_button_green_large {
   }
   .locale-list-trigger {
     margin-bottom: 0;
-    color: $color_white;
+    color: $color_black;
     color: transparentize($color_white, 0.8);
     @include respond-min($main_menu-mobile_menu_cutoff) {
       margin-top: 0;
-      border: 1px solid desaturate(lighten($color_primary, 5%), 5%);
+      border: 1px solid desaturate(darken($color_primary, 5%), 5%);
       border-radius: 3px;
       color: $link-color;
       padding: 0;
@@ -384,6 +390,7 @@ a.link_button_green_large {
 .locale-list-trigger .current-locale:after {
   display: block;
   position: absolute;
+  color: $color_black;
   content: '';
   right: 10px;
   top: 12px;
@@ -394,15 +401,17 @@ a.link_button_green_large {
   @include ie8 {
     border-top: 5px solid $color_white;
   }
-  border-top: 5px solid transparentize($color_white, 0.6);
+  border-top: 5px solid transparentize($color_black, 0.6);
 }
 
 .locale-list-trigger .current-locale,
 .locale-list .available-languages a {
   display: block;
+  color: $color_black;
   cursor: pointer;
   font-weight: normal;
   @include respond-min($main_menu-mobile_menu_cutoff) {
+    color: desaturate(darken($color_primary, 20%), 5%);
     font-size: 0.8125em;
     line-height: 1em;
   }
@@ -422,6 +431,9 @@ a.link_button_green_large {
     border-radius: 3px;
     font-size: 1em;
     min-width: 100%;
+  }
+  a {
+    color: $color_white;
   }
 
 }
@@ -448,15 +460,18 @@ a.link_button_green_large {
 .locale-list .available-languages a:link,
 .locale-list .available-languages a:visited {
   display: block;
+  color: $color_black;
   background-color: $color_primary;
   padding: 0.66em 1em;
   width: 100%;
   text-decoration: none;
-  color: transparentize($color_white, 0.2);
+  color: transparentize($color_black, 0.2);
   @include ie8 {
     color: $color_white;
   }
   @include respond-min($main_menu-mobile_menu_cutoff) {
+    color: $color_white;
+    color: transparentize($color_white, 0.2);
     background-color: lighten($color_neutral_dark, 6%);
   }
   transition: background-color 0.5s ease-out;
@@ -466,11 +481,12 @@ a.link_button_green_large {
 .locale-list .available-languages a:focus {
   border-bottom: none;
   background-color: darken($color_primary, 5%);
+  color: $color_black;
   @include respond-min($main_menu-mobile_menu_cutoff) {
-    background-color: $color_neutral_dark
+    background-color: $color_neutral_dark;
+    color: $color_white;
+    color: transparentize($color_black, 0.2);
   }
-  color: $color_white;
-
 }
 
 /* JS interactivity */
@@ -481,19 +497,20 @@ a.link_button_green_large {
 
 .locale-list.active .current-locale {
   background-color: $color_primary;
-  color: $color_white;
+  color: $color_black;
   border-color: $color_primary;
   @include respond-min($main_menu-mobile_menu_cutoff) {
     background-color: lighten($color_neutral_dark, 6%);
     border-bottom: 1px solid lighten($color_neutral_dark, 2%);
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+    color: $color_white;
   }
 }
 
 .locale-list.active .current-locale:after {
   @include ie8 {
-    border-top-color: $color_white;
+    border-top-color: $color_black;
   }
   border-top-color: transparentize($color_white, 0.6);
 }
@@ -511,6 +528,7 @@ a.link_button_green_large {
 
   /* Hide the greeting on smaller devices */
   .greeting {
+    color: $color_orange;
     display: none;
   }
 
@@ -607,9 +625,9 @@ div.correspondence {
 }
 
 .outgoing.correspondence {
-  border-top: 8px solid $color_primary;
+  border-top: 8px solid $color_orange;
   a.link_to_this {
-    background-color: $color_primary;
+    background-color: $color_orange;
   }
 }
 
@@ -773,7 +791,7 @@ dt {
 .steps__step-number {
   height: 3.5em;
   width: 3.5em;
-  background-color: $color_primary;
+  background-color: $color_red;
   box-shadow: 0 1px 2px transparentize($color_black, 0.75);
   padding: 1em;
   border-radius: 100%;
@@ -827,17 +845,18 @@ dt {
 }
 
 .homepage-hero {
-  background-color: $color_neutral_dark;
+  background-color: $color_red;
   background-image: image-url('homepage-background-small.jpg');
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+  background-position: center bottom;
+  background-size: contain;
   color: $color_white;
   padding: 2em 0 5em;
   position: relative;
   @include respond-min($main_menu-mobile_menu_cutoff) {
     padding: 5em 0 8em;
     background-image: image-url('homepage-background.jpg');
+    background-position: center top;
   }
 
   a {
@@ -851,12 +870,13 @@ dt {
 
   .new-request__make-new-requests {
     @include button-base;
-    background-color: desaturate(darken($color_secondary, 10%), 5%);
-    color: $color_white;
+    background-color: $color_primary;
+    color: $color_black;
     &:hover,
     &:active,
     &:focus {
-      background-color: darken($color_secondary, 20%);
+      background-color: $color_green;
+      color: $color_white;
     }
   }
 }
