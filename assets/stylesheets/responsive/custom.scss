@@ -484,8 +484,8 @@ a.link_button_green_large {
   color: $color_black;
   @include respond-min($main_menu-mobile_menu_cutoff) {
     background-color: $color_neutral_dark;
-    color: $color_white;
-    color: transparentize($color_black, 0.2);
+    color: $color_primary;
+    color: transparentize($color_primary, 0.2);
   }
 }
 
