@@ -14,3 +14,6 @@ unless column_exists?(:users, :identity_card_number)
   require File.expand_path migration_file_path, __FILE__
   BilmehakkiThemeAddIdentityCardNumberToUser.up
 end
+
+# Create any necessary global Censor rules
+require File.expand_path(File.dirname(__FILE__) + '/lib/censor_rules')
