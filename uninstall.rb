@@ -1,6 +1,10 @@
 # -*- encoding : utf-8 -*-
 # Uninstall hook code here
 
+def table_exists?(table)
+  ActiveRecord::Base.connection.table_exists?(table)
+end
+
 def column_exists?(table, column)
   if table_exists?(table)
     ActiveRecord::Base.connection.column_exists?(table, column)

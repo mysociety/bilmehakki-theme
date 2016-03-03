@@ -1,6 +1,9 @@
 # -*- encoding : utf-8 -*-
 # This file is executed in the Rails evironment by the `rails-post-deploy`
 # script
+def table_exists?(table)
+  ActiveRecord::Base.connection.table_exists?(table)
+end
 
 def column_exists?(table, column)
   if table_exists?(table)
