@@ -1,0 +1,22 @@
+<% @title = _('Change your Turkish Identification Number on {{site_name}}',
+   :site_name => site_name) %>
+
+<div id="change_identity_card_number">
+  <%= form_for(@user, :url => user_update_identity_card_number_path) do |f| %>
+    <%= foi_error_messages_for :user %>
+
+    <div class="form_note">
+      <h1><%= @title %></h1>
+    </div>
+
+    <p>
+      <%= f.label :identity_card_number, _('Turkish Identification Number:'),
+                  :class => 'form_label' %>
+      <%= f.text_field :identity_card_number, :value => @user.identity_card_number,  :placeholder => '12345678901' %>
+    </p>
+
+    <div class="form_button">
+      <%= f.submit _('Change Turkish Identification Number') %>
+    </div>
+  <% end %>
+</div>
