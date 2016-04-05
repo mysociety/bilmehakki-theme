@@ -1,0 +1,185 @@
+<% @title = "Başvuru nasıl yapılır?" %>
+
+<%= render :partial => 'sidebar' %>
+<div id="left_column_flip">
+
+<h1 id="making_requests"><%= @title %> <a href="#making_requests">#</a></h1>
+
+<dl>
+  <dt id="which_authority">İstediğim bilgi için hangi kuruma başvuru yapmalıyım? <a href="#which_authority">#</a></dt>
+  <dd>
+    <p>Aradığınız bilgi için hangi kuruma başvuru yapacağınıza karar vermek bazen karmaşık olabilir. Bu konuda karar vermek için <a href="http://bilmehakki.org">bilmehakki.org</a>’da bilgi istediğiniz konuya dair daha önce yapılmış başvurulara bakarak bir fikir edinebilirsiniz.</p>
+
+    <p>4982 Sayılı Bilgi Edinme Hakkı Kanunu çerçevesinde, yanlış kuruma yapılan başvuruların doğru kuruma yönlendirilmesi yasal bir zorunluluktur.</p>
+  </dd>
+
+  <dt id="missing_body">Başvuru yapmak istediğim kuruluş sitenizde mevcut değil! <a href="#missing_body">#</a></dt>
+  <dd>
+    <p>Bulamadığınız kurumun adını biliyorsanız bilgi edinme için kullandıkları email adresini, <a href="<%= new_change_request_path %>">bizimle paylaşabilirsiniz</a>.</p>
+  </dd>
+
+  <!-- TODO -->
+  <dt id="authorities">Why do you include some authorities that aren't formally subject to FOI?<a href="#authorities">#</a> </dt>
+  <dd>
+    <p><%= site_name %> lets you make requests for information to a range of
+    organisations:</p>
+
+    <ul>
+      <li> Those formally subject to the FOI Act</li>
+      <li> Those formally subject to the Environmental Regulations (a less well  
+      defined group)</li>
+      <li> Those which voluntarily comply with the FOI Act</li>
+      <li> Those which aren't subject to the Act but we think should be, on grounds
+      such as them having significant public responsibilities. 
+      </li>
+    </ul>
+
+    <p>In the last case, we're using the site to lobby for expansion of the
+    scope of the FOI Act. Even if an organisation is not legally obliged to respond
+    to an FOI request, they can still do so voluntarily.
+    </p>
+  </dd>
+
+  <dt id="focused">Başvurumda neden tek bir konuya odaklanmam gerekiyor? <a href="#focused">#</a></dt>
+  <dd>
+    <p>Başvurunuzda istenilen bilgi dışında ayrıntı eklemezseniz, aradığınız bilginin ne olduğunun anlaşılması daha kolay olacaktır.</p>
+
+    <p>Başvurunuza kişisel yakınmalardan, kendiniz hakkında bilgilendirme yapmaktan ve hakaret ve aşağılama olarak yorumlanabilecek cümleler kullanmaktan kaçının. Bu tür başvuruları siteden kaldırmak durumunda kalabiliriz. Kısa ve öz bilgi talepleri, kamu kuruluşlarının istediğiniz bilgiyi sağlamasını kolaylaştıracaktır.</p>
+  </dd>
+
+  <dt id="fees">Başvuru yapmak ücretli mi? <a href="#fees">#</a></dt>
+  <dd>
+    <p>Bilgi edinme başvurularını yapmak ücretsiz olmakla birlikte, kanunda belirtildiği durumlarda istenilen bilgiyi paylaşmak için kurum ve kuruluşlar bir ücret talep edebilir. Sitemiz bu taleplerin karşılanmasından sorumlu değildir.</p>
+
+    <p>Bazen kurum ve kuruluşlar başvuruda istenilen bilgileri toparlama maliyetinin çok yüksek olacağını söyleyerek başvuruyu reddedebilir. Böyle bir durumda başvurunuzun kapsamını daraltarak (örneğin, on yıllık değil bir yıllık veri isteyerek) tekrarlamanızı öneririz.</p>
+  </dd>
+
+  <dt id="quickly_response">Ne kadar sürede cevap alabilirim? <a href="#quickly_response">#</a></dt>
+  <dd>
+    <p>Kanun kapsamında başvuruların 15 işgünü içinde cevaplanması gerekir. Başvurunuza verilmesi gereken yanıt geciktiğinde bilmehakki.org size hatırlatma gönderecektir. Bu durumda kuruma tekrar yazıp yasayı ihlal ettiklerini söyleyebilirsiniz.</p>
+
+    <p>Başvurunuza yanıt almadığınız takdirde atabileceğiniz adımlar:</p>
+    <ul>
+      <li>Bazen teknik bir sorun dolayısıyla kurum gerçekten başvurunuzu almamış olabilir. Telefon edip başvuruyu alıp almadıklarını teyit edebilirsiniz.</li>   
+      <li>Sonuç alamazsanız kurum içi denetim isteyip, kurum hakkında <a href="http://www.bedk.gov.tr/">Bilgi Edinme Değerlendirme Kurulu</a>’na şikayette bulunabilirsiniz.</li> 
+    </ul>
+  </dd>
+
+  <!-- TODO -->
+  <dt id="no_response">What if I never get a response? <a href="#no_response">#</a></dt>
+  <dd>
+    <p>There are several things you can do if you never get a response.</p>
+    <ul>
+        <li>Sometimes there has been a genuine problem and the authority never
+        received the request. It is worth telephoning the authority and politely
+        checking that they received the request. It was sent to them by email.
+        </li>
+        <li>If they have not received it, the problem is most likely due to
+        "spam filters". Refer the authority to the measures in the answer 
+        '<a href="/help/officers#spam_problems">I can see a request on <%= site_name %>, but we never got it by email!</a>' 
+        in the FOI officers section of this help. 
+        </li>
+        <li>If you're still having no luck, then you can ask for an internal review,
+        and then complain to the Information Commissioner about the authority.
+        Read our page '<a href="/help/unhappy">Unhappy about the response you got?</a>'.
+    </ul>
+  </dd>
+
+  <dt id="not_satifised">Gelen yanıttan memnun olmazsam ne yapmalıyım? <a href="#not_satifised">#</a></dt>
+    <p>Bir kamu kurumuna yaptığınız başvuruya cevap alamadığınızda, ya da eksik cevap aldığınızda itiraz hakkınız vardır. Bu durumda aşağıdaki yöntemleri izleyebilirsiniz.</p>
+    <ol>
+      <li><strong><a href="http://www.bedk.gov.tr/">Bilgi Edinme Değerlendirme Kurulu'na</a> (BEDK) itiraz başvurusunda bulunmak</strong>: Bu, aynı zamanda en hızlı sonuç verecek yaklaşımdır. İlgili kurumdan başvurunuza yazılı cevap geldikten sonra BEDK’ya itirazda bulunmak için 30 işgünü süreniz vardır. BEDK’nın elektronik posta aracılığıyla gönderilmiş itirazları gündemine almadığını ve tüm itirazların posta yoluyla gönderilmesi gerektiğini unutmayın. BEDK, ret veya yetersiz cevap durumlarında itiraz için genellikle gideceğiniz ilk kurum olmalıdır.</li>
+      <li><strong>İdari yargıya gitmek:</strong> Cevabın elinize ulaşmasından sonra idari yargıya gitmek için 60 gününüz vardır.</li>
+      <li><strong>Bilgiye erişimi kısıtlayan personel hakkında soruşturma istemek:</strong> Başvurulara yanıt vermeyi reddeden kamu görevlileri için bir soruşturma istemek her zaman seçenek olarak mevcuttur.</li> 
+      <li><strong>Kamu Görevlileri Etik Kurulu’na Başvurmak:</strong> Kamu Görevlileri Etik Kurulu, kamu görevlilerinin görevlerini yürütürken etik davranış ilkelerinin ihlal edildiği iddiasıyla yapılacak başvurular üzerine gerekli inceleme ve araştırmayı yaparak sonucu ilgili makamlara bildirmek ile görevlidir.</li>
+      <li><strong>Anayasa Mahkemesi’ne Başvurmak:</strong> Yukarıda bahsedilen bütün yöntemleri gerçekleştirmeden Anayasa Mahkemesi’ne (AYM) itiraz edemezsiniz. Normal şartlarda AYM’ye gidebilmek için idari yargı yolunu tüketmeniz gerekir.</li>
+    </ol>
+  </dd>
+
+  <!-- TODO -->
+  <dt id="reuse">It says I can't re-use the information I got! <a href="#reuse">#</a></dt>
+  <dd>
+    <p>Authorities often add legal boilerplate about the 
+    "<a href="http://www.opsi.gov.uk/si/si2005/20051515">Re-Use of Public Sector
+    Information Regulations 2005</a>", which at first glance implies you may not
+    be able do anything with the information.
+    </p>
+
+    <p>You can, of course, write articles about the information or summarise it, or
+    quote parts of it. We also think you should feel free to republish the
+    information in full, just as we do, even though in theory you might not be
+    allowed to do so.  See <a href="/help/officers#copyright">our policy on copyright</a>.</p>
+  </dd>
+
+  <!-- TODO -->
+  <dt id="ico_help">Can you tell me more of the nitty gritty about the process of making requests? <a href="#ico_help">#</a></dt>
+  <dd>
+    <p>Have a look at the
+    <a href="http://www.ico.gov.uk/for_the_public/access_to_official_information.aspx">access to official information</a>
+    pages on the Information Commissioner's website.</p>
+
+    <p>If you're requesting information from a Scottish public authority,
+    the process is very similar. There are differences around time
+    limits for compliance.
+    See the <a href="http://www.itspublicknowledge.info/nmsruntime/saveasdialog.asp?lID=1858&amp;sID=321">Scottish
+    Information Commissioner's guidance</a> for details.</p> 
+  </dd>
+
+  <dt id="data_protection">Kendim hakkında bilgi isteyebilir miyim? <a href="#data_protection">#</a></dt>
+  <dd>
+    <p>Siteyi kullanarak yapılan başvurular kamuya açık olmaktadır. Eğer başvurunuzun özel olmasını istiyorsanız, kuruma doğrudan başvurmanız gerekir.</p>
+  </dd>
+
+
+  <!-- TODO -->
+  <dt id="private_requests">I'd like to keep my request secret! (At least until I publish my story) <a href="#private_requests">#</a> </dt>
+  <dd><p><%= site_name %> is currently only designed for public requests. All
+    responses that we receive are automatically published on the website for anyone
+    to read.  </p>
+    <p>You should contact the public authority directly if you would like to
+    make a request in private.  If you're interested in buying a system which helps
+    you manage FOI requests in secret, then <a href="/help/contact">contact us</a>.
+    </p>
+  </dd>
+
+  <!-- TODO -->
+  <dt id="eir">Why can I only request information about the environment from some authorities? <a href="#eir">#</a> </dt>
+  <dd>
+    <p>Some public authorities, such as <a href="http://www.whatdotheyknow.com/body/south_east_water">South East Water</a>,
+      don't come under the Freedom of Information Act, but do come under another law called
+      the Environmental Information Regulations (EIR). 
+    </p>
+
+    <p>It's a very similar law, so you make a request
+    to them using <%= site_name %> in just the same way as an FOI request. The only
+    difference is that on the page where your write you request, it reminds you
+    that you can only request "environmental information" and tells you what that
+    means. It is quite broad.
+    </p>
+
+    <p>You can, of course, request environmental information from other
+    authorities. Just make a Freedom of Information (FOI) request as normal. The
+    authority has a duty to work out if the Environmental Information Regulations
+    (EIR) is the more appropriate legislation to reply under. 
+    </p>
+  </dd>
+
+  <dt id="multiple">Bir defada birden çok kuruma başvuru yapabilir miyim? <a href="#multiple">#</a></dt>
+  <dd>
+    <p>Çok sayıda kuruma başvuru yapmak isteyenlere tavsiyemiz, öncelikle bilgi edinme isteğinizi az sayıda kuruluşa göndermeniz ve gelen cevaplara göre başvurunuzu yeniden yazmanız. Şu anda toplu başvuru yapmak için bir sistem bulunmamaktadır; başvurunuzu her kurum için ayrı ayrı tekrarlamanız gerekir.</p>
+  </dd>
+
+  <dt id="offsite">Daha önce siteyi kullanmadan yaptığım bir başvuruyu arşivinize ekleyebilir miyim? <a href="#offsite">#</a></dt>
+  <dd>
+    <p><a href="http://bilmehakki.org">Bilmehakki.org</a> yalnızca siteden yapılan başvuruları arşivlemektedir. Gelen cevabın gerçekten başvuru yapılan kurumdan geldiğini teyit etme yöntemi olmadığı için, dışarıdan yapılan başvuruları siteye dahil etmemiz söz konusu olamaz. Başvurunuzun burada arşivlenmesini istiyorsanız, siteyi kullanarak başvurunuzu tekrarlayabilirsiniz.</p>
+  </dd>
+
+  <dt id="moderation">Bilgi edinme başvurularına eklenen notların moderasyonunu neye göre gerçekleştiriyorsunuz? <a href="#moderation">#</a></dt>
+  <dd> 
+    <p><a href="http://bilmehakki.org">Bilmehakki.org</a> üzerinde yapılan başvurulara ancak konuyla ilgili netleştirici veya açıklayıcı notlar eklenebilir. Bunun dışında yorum ve görüşler siteden kaldırılacaktır.</p>
+  </dd>
+</dl>
+
+<div id="hash_link_padding"></div>
+
+</div>
