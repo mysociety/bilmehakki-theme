@@ -3,6 +3,43 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe User do
 
+  describe :address do
+
+    let(:address) do
+      <<-EOF.strip_heredoc
+      12 The Street
+      The Town
+      Istanbul
+      123891
+      EOF
+    end
+
+    it 'has an address attribute' do
+      user = User.new(:address => address)
+      expect(user.address).to eq(address)
+    end
+
+    it 'can be set' do
+      user = User.new
+      user.address = address
+      expect(user.address).to eq(address)
+    end
+
+    it 'is not valid if no address is present' do
+      user = User.new
+      user.valid?
+      expect(user.errors[:address]).to eq(["Please enter your address"])
+    end
+
+    it 'allows a valid format' do
+      user = User.new
+      user.address = address
+      user.valid?
+      expect(user.errors[:address]).to be_empty
+    end
+
+  end
+
   describe :identity_card_number do
 
     let(:error_msg) do
