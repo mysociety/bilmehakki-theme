@@ -18,4 +18,11 @@ if ENV['REMOVE_MIGRATIONS']
     require File.expand_path migration_file_path, __FILE__
     BilmehakkiThemeAddIdentityCardNumberToUser.down
   end
+
+  # Remove the address field to the User model
+  if column_exists?(:users, :address)
+    migration_file_path = '../db/migrate/bilmehakki-theme_add_address_to_user'
+    require File.expand_path migration_file_path, __FILE__
+    BilmehakkiThemeAddAddressToUser.down
+  end
 end
