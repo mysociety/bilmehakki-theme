@@ -11,7 +11,9 @@ Rails.configuration.to_prepare do
     def default_letter
       return nil if message_type == 'followup'
       "4982 Bilgi Edinme Hakkı Kanunu gereğince bilgi veya belge istemim " \
-      "aşağıda belirtilmiştir. Gereğini arz ederim."
+      "aşağıda belirtilmiştir. Gereğini arz ederim." \
+      "\n\n\n\n\n\n\n" \
+      "Başvuruma e-postayla cevap almak istiyorum."
     end
   end
 
