@@ -33,6 +33,11 @@
     </p>
 
     <p>
+      <label class="form_label" for="user_signup_address"><%= _('Address:')%></label>
+      <%= text_area 'user_signup', 'address', { :tabindex => 27 } %>
+    </p>
+
+    <p>
       <label class="form_label" for="user_signup_password"> <%= _('Password:')%></label>
       <%= password_field 'user_signup', 'password', { :size => 15, :tabindex => 30, :autocomplete => "off" } %>
     </p>
