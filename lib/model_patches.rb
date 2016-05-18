@@ -14,6 +14,8 @@ Rails.configuration.to_prepare do
                 :message => _("Please enter your Turkish Identification Number in the correct format")
               }
 
+    validates_presence_of :address, :message => _("Please enter your address")
+
     after_save :update_censor_rules
 
     # The "internal admin" is a special user for internal use.
@@ -26,6 +28,7 @@ Rails.configuration.to_prepare do
             :email => AlaveteliConfiguration.contact_email,
             :password => password,
             :password_confirmation => password,
+            :address => '[Admin]',
             :identity_card_number => '12345678901')
         user.save!
       elsif user.identity_card_number.nil?

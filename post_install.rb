@@ -18,5 +18,11 @@ unless column_exists?(:users, :identity_card_number)
   BilmehakkiThemeAddIdentityCardNumberToUser.up
 end
 
+unless column_exists?(:users, :address)
+  migration_file_path = '../db/migrate/bilmehakki-theme_add_address_to_user'
+  require File.expand_path migration_file_path, __FILE__
+  BilmehakkiThemeAddAddressToUser.up
+end
+
 # Create any necessary global Censor rules
 require File.expand_path(File.dirname(__FILE__) + '/lib/censor_rules')
