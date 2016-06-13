@@ -7,21 +7,18 @@
 <div id="contact_preamble" class="contact_preamble">
 
   <% if !flash[:notice] %>
-    <h2>Contact an authority to get official information</h2>
+    <h2>Bilgi edinmek için bir kamu kurumuyla iletişime geçin</h2>
     <ul>
-      <li><a href="<%= new_request_path %>">Go here</a> to make a request, in public, for information
-        from public authorities.</li>
-
+      <li>Kamu kurum ve kuruluşlarından bilgi istemek için <a href="<%= new_request_path %>">burayı tıklayın</a>.</li>
       <li>
-        Asking for private information about yourself?
-        Please read our
-        <a href="<%= help_requesting_path(:anchor => 'data_protection') %>">help page</a>.
+        Kişisel bilgi istemeyi düşünüyorsanız, lütfen ilgili
+        <a href="<%= help_requesting_path(:anchor => 'data_protection') %>">yardım sayfasını</a> okuyun.
       </li>
     </ul>
 
   <% end %>
 
-  <h2>Contact the <%= site_name %> team</h2>
+  <h2><%= site_name %> ekibine ulaşın</h2>
   <% if !flash[:notice] %>
     <ul>
       <li>
