@@ -72,9 +72,7 @@ Rails.configuration.to_prepare do
 
 
       if @missing == 0
-        flash[:notice] = _('<p>All done! Thank you very much for your help.</p><p>There are <a href="{{helpus_url}}">more things you can do</a> to help {{site_name}}.</p>',
-                           :helpus_url => help_credits_path+"#helpus",
-                           :site_name => site_name)
+        flash[:notice] = _('<p>All done! Thank you very much for your help.</p>')
       end
 
       @league_table_28_days = RequestClassification.league_table(10, [ "created_at >= ?", Time.now - 28.days ])
