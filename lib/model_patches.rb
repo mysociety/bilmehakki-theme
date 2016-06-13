@@ -10,8 +10,8 @@ Rails.configuration.to_prepare do
   OutgoingMessage.class_eval do
     def default_letter
       return nil if message_type == 'followup'
-      "4982 Bilgi Edinme Hakkı Kanunu gereğince bilgi veya belge istemim " \
-      "aşağıda belirtilmiştir. Gereğini arz ederim."
+      "4982 sayılı Bilgi Edinme Hakkı Kanunu kapsamında aşağıdaki soruların " \
+      "cevaplandırılmasını talep ediyorum."
     end
   end
 
