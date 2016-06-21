@@ -59,6 +59,29 @@ Rails.configuration.to_prepare do
 
   end
 
+  RequestGameController.class_eval do
+
+    def play
+      session[:request_game] = Time.now
+
+      @missing = InfoRequest.count_old_unclassified(:conditions => ["prominence = 'normal'"])
+      @total = InfoRequest.count
+      @done = @total - @missing
+      @percentage = (@done.to_f / @total.to_f * 10000).round / 100.0
+      @requests = InfoRequest.includes(:public_body, :user).get_random_old_unclassified(3, :conditions => ["prominence = 'normal'"])
+
+
+      if @missing == 0
+        flash[:notice] = _('<p>All done! Thank you very much for your help.</p>')
+      end
+
+      @league_table_28_days = RequestClassification.league_table(10, [ "created_at >= ?", Time.now - 28.days ])
+      @league_table_all_time = RequestClassification.league_table(10)
+      @play_urls = true
+    end
+
+  end
+
   UserController.class_eval do
     private
     def user_params(key = :user)

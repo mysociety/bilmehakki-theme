@@ -1,0 +1,36 @@
+<% @title = "4982* Alaveteli tarafından destekleniyor" %>
+
+<%= render :partial => 'sidebar' %>
+<div id="left_column_flip" class="left_column_flip">
+  <% if params[:country_name] %>
+    <h1><%= _("Would you like to see a website like this in your country?") %></h1>
+  <% else %>
+    <h1>4982* Alaveteli tarafından destekleniyor</h1>
+  <% end %>
+  <p>
+    Bu websitesi Alaveteli yazılımı kullanarak hayata geçmiştir. Alaveteli,
+    bilgi edinme istekleri yapmak için geliştirilmiş özgür bir yazılımdır.
+    Her dile kolaylıkla çevrilebilir ve yerel Bilgi Edinme mevzuatına
+    uyarlanabilir.
+  </p>
+
+  <p>
+    Alaveteli yazılımının geliştirilmesi dünyada şeffaflığın artması yönünde
+    faaliyet gösteren birçok vakıf ve dernek tarafından desteklenmektedir.
+  </p>
+
+  <p>
+    Kendi ülkenizde bir Alaveteli websitesi kurmak istiyorsanız size yardım
+    edebiliriz. Siteyi çevirmek ve kullanıma uygun hale getirmek için birkaç gün
+    harcamanız, sonrasında da sitenin moderasyonu için haftada en az bir saat
+    ayırmanız gerekecek.
+  </p>
+
+  <p>
+    <a href="http://alaveteli.org">Alaveteli websitesi</a> hakkında daha fazla
+    bilgi edinin ya da bize bir <a href="mailto:hello@alaveteli.org">email</a>
+    atın.
+  </p>
+
+  <div id="hash_link_padding"></div>
+</div>
