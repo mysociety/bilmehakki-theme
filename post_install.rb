@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-# This file is executed in the Rails evironment by the `rails-post-deploy`
+# This file is executed in the Rails evironment by the `rails-post-install`
 # script
 def table_exists?(table)
   ActiveRecord::Base.connection.table_exists?(table)

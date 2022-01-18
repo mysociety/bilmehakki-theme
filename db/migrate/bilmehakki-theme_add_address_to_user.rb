@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-class BilmehakkiThemeAddAddressToUser < ActiveRecord::Migration
+class BilmehakkiThemeAddAddressToUser < ActiveRecord::Migration[4.2]
   def self.up
     add_column :users, :address, :text
   end

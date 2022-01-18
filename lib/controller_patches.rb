@@ -51,7 +51,7 @@ Rails.configuration.to_prepare do
 
   PublicBodyController.class_eval do
 
-    before_filter :get_turkish_alphabet, :only => [:list]
+    before_action :get_turkish_alphabet, :only => [:list]
 
     def get_turkish_alphabet
       @turkish_alphabet = ["A","B","C","Ç","D","E","Ğ","F","G","H","İ","I","J","K","L","M","N","Ö","O","P","R","S","Ş","Ü","T","U","V","Y","Z"]
@@ -85,7 +85,7 @@ Rails.configuration.to_prepare do
   UserController.class_eval do
     private
     def user_params(key = :user)
-      params[key].slice(:name, :email, :password, :password_confirmation, :identity_card_number, :address)
+      params.require(key).permit(:name, :email, :password, :password_confirmation, :identity_card_number, :address)
     end
   end
 

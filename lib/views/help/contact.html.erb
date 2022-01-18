@@ -1,4 +1,4 @@
-<% @title = "İletişim" %>
+<% @title = "Contact us" %>
 
 <%= foi_error_messages_for :contact %>
 
@@ -7,31 +7,35 @@
 <div id="contact_preamble" class="contact_preamble">
 
   <% if !flash[:notice] %>
-    <h2>Bilgi edinmek için bir kamu kurumuyla iletişime geçin</h2>
+    <h2>Contact an authority to get official information</h2>
     <ul>
-      <li>Kamu kurum ve kuruluşlarından bilgi istemek için <a href="<%= new_request_path %>">burayı tıklayın</a>.</li>
+      <li><a href="<%= new_request_path %>">Go here</a> to make a request, in public, for information
+        from public authorities.</li>
+
       <li>
-        Kişisel bilgi istemeyi düşünüyorsanız, lütfen ilgili
-        <a href="<%= help_requesting_path(:anchor => 'data_protection') %>">yardım sayfasını</a> okuyun.
+        Asking for private information about yourself?
+        Please read our
+        <a href="<%= help_requesting_path(:anchor => 'data_protection') %>">help page</a>.
       </li>
     </ul>
 
   <% end %>
 
-  <h2><%= site_name %> ekibine ulaşın</h2>
+  <h2>Contact the <%= site_name %> team</h2>
   <% if !flash[:notice] %>
     <ul>
       <li>
-        Lütfen önce <a href="<%= help_about_path %>">Yardım sayfasını okuyun</a>. Belki sorunuzun cevabını orada bulabilirsiniz.
+        Please read the  <a href="<%= help_about_path %>">help page</a> first, as it may
+        answer your question quicker.
       </li>
 
-      <li>
-        Bize herhangi bir soru sormak için <a href="mailto:<%=@contact_email%>"><%=@contact_email%></a>’a mail gönderebilirsiniz.
+      <li>We'd love to hear how you've found using this site.
+        Either fill in this form, or send an email to <a
+                            href="mailto:<%=@contact_email%>"><%=@contact_email%></a>
       </li>
 
-      <li>
-        Gönüllü olarak yürütülen bu site resmî bir site olmayıp, hiçbir kamu kurum ve kuruluşu ile ilgisi yoktur.yapılacak itirazların posta yoluyla iletilmesi gerekir.
-      </li>
+      <li>We are a <strong>charity</strong> and not part of the
+        Government.</li>
     </ul>
   <% end %>
 </div>
@@ -84,15 +88,13 @@
   <p class="form_note">
     We can only help you with <strong>technical problems</strong>, or questions
     about Freedom of Information.
-    </P>
+  </p>
 
 
-    <div class="form_button">
-      <%= hidden_field_tag(:submitted_contact_form, 1) %>
-      <%= submit_tag "Send message to the charity", :disable_with => "Sending..." %>
-      &lt;-- we run this site, not the Government!
-    </div>
+  <div class="form_button">
+    <%= hidden_field_tag(:submitted_contact_form, 1) %>
+    <%= submit_tag "Send message to the charity", :data => { :disable_with => "Sending..." } %>
+    &lt;-- we run this site, not the Government!
+  </div>
 
-  <% end %>
-
-
+<% end %>

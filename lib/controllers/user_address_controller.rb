@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class UserAddressController < ApplicationController
-  before_filter :authenticate
+  before_action :authenticate
 
   def edit; end
 
