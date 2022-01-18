@@ -3,139 +3,140 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Gareth Rees <gareth@mysociety.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-18 13:12+0000\n"
-"PO-Revision-Date: 2016-05-18 13:05+0000\n"
+"PO-Revision-Date: 2016-05-18 13:15+0000\n"
 "Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
-"Language-Team: English (http://www.transifex.com/mysociety/bilmehakki-theme/language/en/)\n"
-"Language: en\n"
+"Language-Team: Turkish (http://www.transifex.com/mysociety/bilmehakki-theme/language/tr/)\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 msgid "Address"
 msgstr "Address"
 
 msgid "Address:"
-msgstr "Address:"
+msgstr ""
 
 msgid "Change Turkish Identification Number"
-msgstr "Change Turkish Identification Number"
+msgstr ""
 
 msgid "Change address"
-msgstr "Change address"
+msgstr ""
 
 msgid "Change profile photo"
-msgstr "Change profile photo"
+msgstr ""
 
 msgid "Change your Turkish Identification Number"
-msgstr "Change your Turkish Identification Number"
+msgstr ""
 
 msgid "Change your Turkish Identification Number on {{site_name}}"
-msgstr "Change your Turkish Identification Number on {{site_name}}"
+msgstr ""
 
 msgid "Change your Turkish Identification Number used on {{site_name}}"
-msgstr "Change your Turkish Identification Number used on {{site_name}}"
+msgstr ""
 
 msgid "Change your address"
-msgstr "Change your address"
+msgstr ""
 
 msgid "Change your address on {{site_name}}"
-msgstr "Change your address on {{site_name}}"
+msgstr ""
 
 msgid "Change your address used on {{site_name}}"
-msgstr "Change your address used on {{site_name}}"
+msgstr ""
 
 msgid "Change your email"
-msgstr "Change your email"
+msgstr ""
 
 msgid "Change your password"
-msgstr "Change your password"
+msgstr ""
 
 msgid "Confirm password:"
-msgstr "Confirm password:"
+msgstr ""
 
 msgid "Identity Card Number"
-msgstr "Identity Card Number"
+msgstr ""
 
 msgid "Improve your account security"
-msgstr "Improve your account security"
+msgstr ""
 
 msgid "Is {{email_address}} the wrong address for {{type_of_request}} requests to {{public_body_name}}? If so, please contact us using this form:"
-msgstr "Is {{email_address}} the wrong address for {{type_of_request}} requests to {{public_body_name}}? If so, please contact us using this form:"
+msgstr ""
 
 msgid "Name"
-msgstr "Name"
+msgstr ""
 
 msgid "Password:"
-msgstr "Password:"
+msgstr ""
 
 msgid "Please enter your Turkish Identification Number in the correct format"
-msgstr "Please enter your Turkish Identification Number in the correct format"
+msgstr ""
 
 msgid "Please enter your address"
-msgstr "Please enter your address"
+msgstr ""
 
 msgid "Please use this email address for all replies to this request:"
-msgstr "Please use this email address for all replies to this request:"
+msgstr ""
 
 msgid "REDACTED"
-msgstr "REDACTED"
+msgstr ""
 
 msgid "Requester details"
-msgstr "Requester details"
+msgstr ""
 
 msgid "Sending..."
-msgstr "Sending..."
+msgstr ""
 
 msgid "Sign up"
-msgstr "Sign up"
+msgstr ""
 
 msgid "Then you can change your Turkish Identification Number used on {{site_name}}"
-msgstr "Then you can change your Turkish Identification Number used on {{site_name}}"
+msgstr ""
 
 msgid "Then you can change your address used on {{site_name}}"
-msgstr "Then you can change your address used on {{site_name}}"
+msgstr ""
 
 msgid "To change your Turkish Identification Number used on {{site_name}}"
-msgstr "To change your Turkish Identification Number used on {{site_name}}"
+msgstr ""
 
 msgid "To change your address used on {{site_name}}"
-msgstr "To change your address used on {{site_name}}"
+msgstr ""
 
 msgid "Turkish Identification Number:"
-msgstr "Turkish Identification Number:"
+msgstr ""
 
 msgid "Updated automatically after_save"
-msgstr "Updated automatically after_save"
+msgstr ""
 
 msgid "View your two factor authentication one time passcode"
-msgstr "View your two factor authentication one time passcode"
+msgstr ""
 
 msgid "We will not reveal your email address to anybody unless <a href=\"{{url}}\">you or the law tell us to</a>."
-msgstr "We will not reveal your email address to anybody unless <a href=\"{{url}}\">you or the law tell us to</a>."
+msgstr ""
 
 msgid "Your <strong>name will appear publicly</strong> (<a href=\"{{why_url}}\">why?</a>) on this website and in search engines. <a href=\"{{help_url}}\">Thinking of using a pseudonym?</a>"
-msgstr "Your <strong>name will appear publicly</strong> (<a href=\"{{why_url}}\">why?</a>) on this website and in search engines. <a href=\"{{help_url}}\">Thinking of using a pseudonym?</a>"
+msgstr ""
 
 msgid "Your Turkish Identification Number was successfully updated"
-msgstr "Your Turkish Identification Number was successfully updated"
+msgstr ""
 
 msgid "Your address was successfully updated"
-msgstr "Your address was successfully updated"
+msgstr ""
 
 msgid "Your e-mail:"
-msgstr "Your e-mail:"
+msgstr ""
 
 msgid "Your name:"
-msgstr "Your name:"
+msgstr ""
 
 msgid "edit text about you"
-msgstr "edit text about you"
+msgstr ""
 
 msgid "unknown status "
-msgstr "unknown status "
+msgstr ""
